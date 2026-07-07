@@ -1,0 +1,37 @@
+# Kael's Kleave
+
+OpenMod plugin for Unturned that adds **melee cleave** — long-reach weapons can hit multiple targets in one swing.
+
+## Features
+
+- Range-based cleave using the weapon's built-in `range` stat (`MinRange` config, default `2.0`)
+- Extra zombie hits on zombie melee (always)
+- Optional player cleave (`IncludePlayers: true`) — vanilla friendly-fire rules still apply
+- Configurable max extra targets, damage multiplier, cleave cone angle
+
+## Requirements
+
+- [OpenMod](https://openmod.github.io/openmod-docs/userdoc/installation/unturned.html) on your Unturned dedicated server
+
+## Install
+
+1. Build: `dotnet build -c Release`
+2. Copy to server `openmod/plugins/`:
+   - `bin/Release/netstandard2.1/KaelKodes.KaelsKleave.dll`
+   - `config.yaml`
+3. Restart the server (or `openmod reload` if permitted)
+
+## Config
+
+See `config.yaml`. Key settings:
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `MinRange` | `2.0` | Weapons at or above this range can cleave |
+| `MaxExtraTargets` | `2` | Max additional targets per swing |
+| `IncludePlayers` | `false` | Enable player cleave (PvP) |
+| `SecondaryDamageMultiplier` | `1.0` | Damage scale for cleave hits |
+
+## License
+
+MIT

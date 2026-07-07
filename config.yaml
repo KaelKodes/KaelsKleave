@@ -1,0 +1,19 @@
+# Kael's Kleave — multi-hit melee cleave.
+#
+# MinRange: weapons at or above this range can cleave additional targets.
+# Vanilla reference:
+#   1.75  — knives, short blades
+#   2.0   — bat, camp axe, hockey stick, golf club, chainsaw
+#   2.25  — fire axe, sledgehammer, katana, pitchfork, pool cue
+#   2.5   — zweihander
+#
+# IncludePlayers:
+#   false — cleave zombies only (default)
+#   true  — cleave players too (vanilla friendly-fire / PvP rules still apply)
+KaelsKleave:
+  MinRange: 2.0
+  MaxExtraTargets: 2
+  SecondaryDamageMultiplier: 1.0
+  ExcludeRepeatedMelee: true
+  IncludePlayers: false
+  CleaveAngleDegrees: 70.0
