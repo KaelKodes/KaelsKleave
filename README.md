@@ -20,7 +20,9 @@ OpenMod plugin for Unturned that adds **melee cleave** — long-reach weapons ca
    - `KaelKodes.KaelsKleave.dll` → `openmod/plugins/`
    - `KaelKodes.KaelsKleave/config.yaml` → `openmod/plugins/KaelKodes.KaelsKleave/config.yaml`
 3. Restart the server (or `openmod reload` if permitted)
+
 OR
+
 1. Go to https://github.com/KaelKodes/KaelsKleave/releases
 2. Grab the latest KaelKodes.KaelsKleave.dll
 3. Drop that in your Server/OpenMod/plugins folder
