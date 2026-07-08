@@ -1,5 +1,5 @@
 # Kael's Kleave
-https://imgur.com/a/3vBEFKQ
+![Kael's Kleave banner](https://i.imgur.com/AbCdEfG.png)
 
 OpenMod plugin for Unturned that adds **melee cleave** — long-reach weapons can hit multiple targets in one swing.
 
