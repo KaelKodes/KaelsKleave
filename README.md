@@ -16,14 +16,16 @@ OpenMod plugin for Unturned that adds **melee cleave** — long-reach weapons ca
 ## Install
 
 1. Build: `dotnet build -c Release`
-2. Copy to server `openmod/plugins/`:
-   - `bin/Release/netstandard2.1/KaelKodes.KaelsKleave.dll`
-   - `config.yaml`
+2. From `bin/Release/netstandard2.1/`, copy into your server:
+   - `KaelKodes.KaelsKleave.dll` → `openmod/plugins/`
+   - `KaelKodes.KaelsKleave/config.yaml` → `openmod/plugins/KaelKodes.KaelsKleave/config.yaml`
 3. Restart the server (or `openmod reload` if permitted)
+
+OpenMod also extracts the embedded default config on first load if the subfolder config is missing. Do **not** drop a flat `config.yaml` directly in `openmod/plugins/`.
 
 ## Config
 
-See `config.yaml`. Key settings:
+Key settings:
 
 | Setting | Default | Description |
 |---------|---------|-------------|

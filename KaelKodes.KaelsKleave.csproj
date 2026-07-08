@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>KaelKodes.KaelsKleave</AssemblyName>
     <RootNamespace>KaelKodes.KaelsKleave</RootNamespace>
-    <Version>1.0.0</Version>
+    <Version>0.0.2</Version>
     <PackageId>KaelKodes.KaelsKleave</PackageId>
     <Authors>Kael Kodes</Authors>
     <Description>Range-based melee cleave for Unturned zombies.</Description>
@@ -19,8 +19,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="config.yaml">
+    <EmbeddedResource Include="KaelsKleave.config.yaml">
+      <LogicalName>KaelKodes.KaelsKleave.config.yaml</LogicalName>
+    </EmbeddedResource>
+    <Content Include="KaelsKleave.config.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>KaelKodes.KaelsKleave\config.yaml</TargetPath>
     </Content>
   </ItemGroup>
 

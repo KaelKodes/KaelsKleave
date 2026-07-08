@@ -9,6 +9,6 @@ public class KaelsKleavePlugin : OpenModUnturnedPlugin
     public KaelsKleavePlugin(IServiceProvider serviceProvider, ILogger<KaelsKleavePlugin> logger)
         : base(serviceProvider)
     {
-        logger.LogInformation("Kael's Kleave is ready.");
+        logger.LogInformation("Kael's Kleave v{Version} is ready.", typeof(KaelsKleavePlugin).Assembly.GetName().Version);
     }
 }

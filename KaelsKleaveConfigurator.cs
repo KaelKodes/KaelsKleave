@@ -1,14 +1,15 @@
 using Microsoft.Extensions.DependencyInjection;
-using OpenMod.API.Ioc;
+using OpenMod.API.Plugins;
+using OpenMod.Core.Ioc.Extensions;
 
 namespace KaelKodes.KaelsKleave;
 
-public class KaelsKleaveConfigurator : IServiceConfigurator
+public class KaelsKleaveConfigurator : IPluginContainerConfigurator
 {
-    public void ConfigureServices(IOpenModServiceConfigurationContext openModStartupContext, IServiceCollection serviceCollection)
+    public void ConfigureContainer(IPluginServiceConfigurationContext context)
     {
-        serviceCollection.Configure<KaelsKleaveConfig>(
-            openModStartupContext.Configuration.GetSection("KaelsKleave"));
-        serviceCollection.AddSingleton<CleaveListener>();
+        var services = new ServiceCollection();
+        services.Configure<KaelsKleaveConfig>(context.Configuration.GetSection("KaelsKleave"));
+        context.ContainerBuilder.PopulateServices(services);
     }
 }
